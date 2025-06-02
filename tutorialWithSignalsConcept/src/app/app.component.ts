@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CounterComponent } from './components/counter/counter.component';
+import { ComputedSignalComponent } from './components/computed-signal/computed-signal.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CounterComponent],
+  imports: [ComputedSignalComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
