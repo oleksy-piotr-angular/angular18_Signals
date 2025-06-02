@@ -1,0 +1,22 @@
+{
+  "name": "angular18_signals",
+  "version": "1.0.0",
+  "description": "Tutorial from Leela Podcast",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleksy-piotr-angular/angular18_Signals.git"
+  },
+  "author": "Piolson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oleksy-piotr-angular/angular18_Signals/issues"
+  },
+  "homepage": "https://github.com/oleksy-piotr-angular/angular18_Signals#readme",
+  "dependencies": {
+    "@angular/cli": "^18.2.19"
+  }
+}
