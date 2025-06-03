@@ -5,17 +5,19 @@ import { ComputedSignal3Component } from './components/computed-signal3/computed
 import { ComputedSignal4Component } from './components/computed-signal4/computed-signal4.component';
 import { ComputedSignal5Component } from './components/computed-signal5/computed-signal5.component';
 import { ComputedSignal6Component } from './components/computed-signal6/computed-signal6.component';
+import { ComputedSignal7Component } from './components/computed-signal7/computed-signal7.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    ComputedSignalComponent,
-    ComputedSignal2Component,
-    ComputedSignal3Component,
-    ComputedSignal4Component,
-    ComputedSignal5Component,
-    ComputedSignal6Component,
+    // ComputedSignalComponent,
+    // ComputedSignal2Component,
+    // ComputedSignal3Component,
+    // ComputedSignal4Component,
+    // ComputedSignal5Component,
+    // ComputedSignal6Component,
+    ComputedSignal7Component,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
