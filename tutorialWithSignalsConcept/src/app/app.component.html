@@ -1,4 +1,4 @@
-<!-- <app-computed-signal></app-computed-signal>
+<!-- <!-- <app-computed-signal></app-computed-signal>
 <br />----------------------------------------------
 <app-computed-signal2></app-computed-signal2>
 <br />----------------------------------------------
@@ -8,6 +8,14 @@
 <br />----------------------------------------------
 <app-computed-signal5></app-computed-signal5>
 <br />----------------------------------------------
-<app-computed-signal6></app-computed-signal6> -->
--------------------------------------------
-<app-computed-signal7></app-computed-signal7>
+<app-computed-signal6></app-computed-signal6>
+br />-------------------------------------------
+<app-computed-signal7></app-computed-signal7> -->
+<br />-------------------------------------------
+
+<!-- Conditional Rendering the Component> -->
+@if(componentToggle()){
+<app-computed-signal8></app-computed-signal8>
+}
+<br />
+<button (click)="onToggleComponent()">Toggle Component</button>
