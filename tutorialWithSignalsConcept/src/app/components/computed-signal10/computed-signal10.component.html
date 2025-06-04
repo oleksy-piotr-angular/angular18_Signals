@@ -1,0 +1,15 @@
+<div>
+  <input
+    type="text"
+    (input)="onQueryChange($event)"
+    placeholder="Type your Input here..."
+  />
+</div>
+
+<ul>
+  @for (result of results$ | async; track result) {
+  <li>
+    {{ result }}
+  </li>
+  }
+</ul>

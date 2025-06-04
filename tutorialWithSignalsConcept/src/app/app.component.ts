@@ -8,6 +8,7 @@ import { ComputedSignal6Component } from './components/computed-signal6/computed
 import { ComputedSignal7Component } from './components/computed-signal7/computed-signal7.component';
 import { ComputedSignal8Component } from './components/computed-signal8/computed-signal8.component';
 import { ComputedSignal9Component } from './components/computed-signal9/computed-signal9.component';
+import { ComputedSignal10Component } from './components/computed-signal10/computed-signal10.component';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import { ComputedSignal9Component } from './components/computed-signal9/computed
     // ComputedSignal6Component,
     // ComputedSignal7Component,
     // ComputedSignal8Component,
-    ComputedSignal9Component,
+    // ComputedSignal9Component,
+    ComputedSignal10Component,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
