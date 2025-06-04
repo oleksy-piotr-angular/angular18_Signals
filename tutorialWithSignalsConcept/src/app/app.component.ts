@@ -9,6 +9,7 @@ import { ComputedSignal7Component } from './components/computed-signal7/computed
 import { ComputedSignal8Component } from './components/computed-signal8/computed-signal8.component';
 import { ComputedSignal9Component } from './components/computed-signal9/computed-signal9.component';
 import { ComputedSignal10Component } from './components/computed-signal10/computed-signal10.component';
+import { ComputedSignal11Component } from './components/computed-signal11/computed-signal11.component';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +24,8 @@ import { ComputedSignal10Component } from './components/computed-signal10/comput
     // ComputedSignal7Component,
     // ComputedSignal8Component,
     // ComputedSignal9Component,
-    ComputedSignal10Component,
+    // ComputedSignal10Component,
+    ComputedSignal11Component,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -35,5 +37,9 @@ export class AppComponent {
 
   onToggleComponent() {
     this.componentToggle.update((value) => !value);
+  }
+
+  onNameChange(value: string) {
+    console.log('Name changed:', value);
   }
 }
