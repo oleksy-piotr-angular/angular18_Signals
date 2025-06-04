@@ -6,7 +6,8 @@ import { ComputedSignal4Component } from './components/computed-signal4/computed
 import { ComputedSignal5Component } from './components/computed-signal5/computed-signal5.component';
 import { ComputedSignal6Component } from './components/computed-signal6/computed-signal6.component';
 import { ComputedSignal7Component } from './components/computed-signal7/computed-signal7.component';
-import { ComputedSignal8Component } from './computed-signal8/computed-signal8.component';
+import { ComputedSignal8Component } from './components/computed-signal8/computed-signal8.component';
+import { ComputedSignal9Component } from './components/computed-signal9/computed-signal9.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { ComputedSignal8Component } from './computed-signal8/computed-signal8.co
     // ComputedSignal5Component,
     // ComputedSignal6Component,
     // ComputedSignal7Component,
-    ComputedSignal8Component,
+    // ComputedSignal8Component,
+    ComputedSignal9Component,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

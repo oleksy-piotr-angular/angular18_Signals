@@ -1,0 +1,9 @@
+<p>computed-signal9 works!</p>
+<div>Counter: {{ counter() }}</div>
+<!-- it works the same like a signal above but it needs an "async" pipe and import
+ a CommonModule or AsyncPipe in ComputedSignal9.ts -->
+<div>Counter: {{ counterObservable | async }}</div>
+@if(errorMessage) {
+<div>errorMessage: {{ errorMessage }}</div>
+}
+<!------------------------------------------------------->
