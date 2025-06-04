@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { AfterViewInit, Component, signal, ViewChild } from '@angular/core';
 import { ComputedSignalComponent } from './components/computed-signal/computed-signal.component';
 import { ComputedSignal2Component } from './components/computed-signal2/computed-signal2.component';
 import { ComputedSignal3Component } from './components/computed-signal3/computed-signal3.component';
@@ -10,6 +10,9 @@ import { ComputedSignal8Component } from './components/computed-signal8/computed
 import { ComputedSignal9Component } from './components/computed-signal9/computed-signal9.component';
 import { ComputedSignal10Component } from './components/computed-signal10/computed-signal10.component';
 import { ComputedSignal11Component } from './components/computed-signal11/computed-signal11.component';
+import { Observable } from 'rxjs';
+import { outputToObservable } from '@angular/core/rxjs-interop';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -26,20 +29,22 @@ import { ComputedSignal11Component } from './components/computed-signal11/comput
     // ComputedSignal9Component,
     // ComputedSignal10Component,
     ComputedSignal11Component,
+    AsyncPipe,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = 'tutorialWithSignalsConcept';
 
-  componentToggle = signal(false);
+  nameChange$!: Observable<string>;
 
-  onToggleComponent() {
-    this.componentToggle.update((value) => !value);
-  }
+  //another handful example of catching
+  @ViewChild('computedSignal11')
+  computedSignal11: ComputedSignal11Component | null = null;
 
-  onNameChange(value: string) {
-    console.log('Name changed:', value);
+  ngAfterViewInit(): void {
+    //Converts an Angular output declared via output() or outputFromObservable() to an observable.
+    this.nameChange$ = outputToObservable(this.computedSignal11!.nameChange);
   }
 }

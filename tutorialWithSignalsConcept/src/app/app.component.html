@@ -1,4 +1,4 @@
-<!-- <!-- <app-computed-signal></app-computed-signal>
+<!-- <app-computed-signal></app-computed-signal>
 <br />----------------------------------------------
 <app-computed-signal2></app-computed-signal2>
 <br />----------------------------------------------
@@ -22,6 +22,8 @@ br />-------------------------------------------
 <br />----------------------------------------------
 <app-computed-signal9></app-computed-signal9> 
 <app-computed-signal10></app-computed-signal10>-->
-<app-computed-signal11
-  (nameChange)="onNameChange($event)"
-></app-computed-signal11>
+<app-computed-signal11 #computedSignal11></app-computed-signal11>
+
+<div>
+  {{ nameChange$ | async }}
+</div>
