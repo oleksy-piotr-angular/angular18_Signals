@@ -32,5 +32,37 @@ br />-------------------------------------------
   [firstName]="firstName"
   [studentAge]="age"
   [lastName]="lastName"
-></app-computed-signal12>-->
-<app-computed-signal13 [disabled]="'<Some String>'"></app-computed-signal13>
+></app-computed-signal12>
+<app-computed-signal13 [disabled]="'<Some String>'"></app-computed-signal13>-->
+<p>Property Binding and Event Binding Model Example</p>
+-----------------------------------------------------------------
+<app-computed-signal14
+  [disabled]="isDisabled"
+  [checked]="parentChecked"
+  (checkedChange)="handleCheckedChange($event)"
+></app-computed-signal14>
+<!--
+  <app-computed-signal14 
+    [disabled]="isDisabled" // This is a InputSignal 'disabled'
+    [checked]="parentChecked" // This is a ModelSignal 'checked' instead of two-way binding we use a one-way property binding
+    (checkedChange)="handleCheckedChange($event)" // This is a ModelSignal 'checked' instead of two-way binding we use an event binding
+  ></app-computed-signal14>
+-->
+<br />
+<br />
+<br />
+<p>Two way Binding Model Example</p>
+-----------------------------------------------------------------
+<app-computed-signal14
+  [disabled]="isDisabled"
+  [(checked)]="parentChecked"
+></app-computed-signal14>
+<!--
+  !This is a two-way binding example and it works the same way as code above
+   <app-computed-signal14 
+    [disabled]="isDisabled" // This is a InputSignal 'disabled' 
+    [(checked)]="parentChecked" // This is a ModelSignal 'checked' with two-way binding
+  ></app-computed-signal14>
+-->
+
+<p>Checked state in parent: {{ parentChecked }}</p>

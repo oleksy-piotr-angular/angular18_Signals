@@ -15,6 +15,7 @@ import { outputToObservable } from '@angular/core/rxjs-interop';
 import { AsyncPipe } from '@angular/common';
 import { ComputedSignal12Component } from './components/computed-signal12/computed-signal12.component';
 import { ComputedSignal13Component } from './components/computed-signal13/computed-signal13.component';
+import { ComputedSignal14Component } from './components/computed-signal14/computed-signal14.component';
 
 @Component({
   selector: 'app-root',
@@ -32,15 +33,17 @@ import { ComputedSignal13Component } from './components/computed-signal13/comput
     // ComputedSignal10Component,
     // ComputedSignal11Component,
     // ComputedSignal12Component,
-    ComputedSignal13Component,
+    // ComputedSignal13Component,
+    ComputedSignal14Component,
     // AsyncPipe,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'tutorialWithSignalsConcept';
-  firstName = 'John';
-  lastName = 'Doe';
-  age = 30;
+  parentChecked = false;
+  isDisabled = false;
+  handleCheckedChange(newCheckedValue: boolean) {
+    this.parentChecked = newCheckedValue;
+  }
 }
