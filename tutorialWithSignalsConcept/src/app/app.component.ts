@@ -14,6 +14,7 @@ import { Observable } from 'rxjs';
 import { outputToObservable } from '@angular/core/rxjs-interop';
 import { AsyncPipe } from '@angular/common';
 import { ComputedSignal12Component } from './components/computed-signal12/computed-signal12.component';
+import { ComputedSignal13Component } from './components/computed-signal13/computed-signal13.component';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +31,8 @@ import { ComputedSignal12Component } from './components/computed-signal12/comput
     // ComputedSignal9Component,
     // ComputedSignal10Component,
     // ComputedSignal11Component,
-    ComputedSignal12Component,
+    // ComputedSignal12Component,
+    ComputedSignal13Component,
     // AsyncPipe,
   ],
   templateUrl: './app.component.html',
