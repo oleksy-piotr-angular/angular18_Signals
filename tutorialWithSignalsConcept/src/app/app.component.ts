@@ -13,6 +13,7 @@ import { ComputedSignal11Component } from './components/computed-signal11/comput
 import { Observable } from 'rxjs';
 import { outputToObservable } from '@angular/core/rxjs-interop';
 import { AsyncPipe } from '@angular/common';
+import { ComputedSignal12Component } from './components/computed-signal12/computed-signal12.component';
 
 @Component({
   selector: 'app-root',
@@ -28,23 +29,16 @@ import { AsyncPipe } from '@angular/common';
     // ComputedSignal8Component,
     // ComputedSignal9Component,
     // ComputedSignal10Component,
-    ComputedSignal11Component,
-    AsyncPipe,
+    // ComputedSignal11Component,
+    ComputedSignal12Component,
+    // AsyncPipe,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   title = 'tutorialWithSignalsConcept';
-
-  nameChange$!: Observable<string>;
-
-  //another handful example of catching
-  @ViewChild('computedSignal11')
-  computedSignal11: ComputedSignal11Component | null = null;
-
-  ngAfterViewInit(): void {
-    //Converts an Angular output declared via output() or outputFromObservable() to an observable.
-    this.nameChange$ = outputToObservable(this.computedSignal11!.nameChange);
-  }
+  firstName = 'John';
+  lastName = 'Doe';
+  age = 30;
 }
