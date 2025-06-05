@@ -1,68 +1,13 @@
-<!-- <app-computed-signal></app-computed-signal>
-<br />----------------------------------------------
-<app-computed-signal2></app-computed-signal2>
-<br />----------------------------------------------
-<app-computed-signal3></app-computed-signal3>
-<br />----------------------------------------------
-<app-computed-signal4></app-computed-signal4>
-<br />----------------------------------------------
-<app-computed-signal5></app-computed-signal5>
-<br />----------------------------------------------
-<app-computed-signal6></app-computed-signal6>
-br />-------------------------------------------
-<app-computed-signal7></app-computed-signal7> 
-<br />--------------------------------------------->
-
-<!-- Conditional Rendering the Component> -->
-<!-- @if(componentToggle()){
-<app-computed-signal8></app-computed-signal8>
-}
-<br />
-<button (click)="onToggleComponent()">Toggle Component</button>
-<br />----------------------------------------------
-<app-computed-signal9></app-computed-signal9> 
-<app-computed-signal10></app-computed-signal10>
-<app-computed-signal11 #computedSignal11></app-computed-signal11>
-
-<div>
-  {{ nameChange$ | async }}
-</div>-->
-<!-- Component with Input Property Binding with InputSignals 
-<app-computed-signal12
-  [firstName]="firstName"
-  [studentAge]="age"
-  [lastName]="lastName"
-></app-computed-signal12>
-<app-computed-signal13 [disabled]="'<Some String>'"></app-computed-signal13>-->
-<p>Property Binding and Event Binding Model Example</p>
------------------------------------------------------------------
-<app-computed-signal14
-  [disabled]="isDisabled"
-  [checked]="parentChecked"
-  (checkedChange)="handleCheckedChange($event)"
-></app-computed-signal14>
-<!--
-  <app-computed-signal14 
-    [disabled]="isDisabled" // This is a InputSignal 'disabled'
-    [checked]="parentChecked" // This is a ModelSignal 'checked' instead of two-way binding we use a one-way property binding
-    (checkedChange)="handleCheckedChange($event)" // This is a ModelSignal 'checked' instead of two-way binding we use an event binding
-  ></app-computed-signal14>
--->
-<br />
-<br />
-<br />
-<p>Two way Binding Model Example</p>
------------------------------------------------------------------
-<app-computed-signal14
-  [disabled]="isDisabled"
-  [(checked)]="parentChecked"
-></app-computed-signal14>
-<!--
-  !This is a two-way binding example and it works the same way as code above
-   <app-computed-signal14 
-    [disabled]="isDisabled" // This is a InputSignal 'disabled' 
-    [(checked)]="parentChecked" // This is a ModelSignal 'checked' with two-way binding
-  ></app-computed-signal14>
--->
-
-<p>Checked state in parent: {{ parentChecked }}</p>
+<app-computed-signal15>
+  <!--!if we want to access the "#h1" element in the effect, we can use contentChild to get a reference -->
+  <h1 #h1>Computed Signal Example</h1>
+  <!--!if we want to access the "#h2" element in the effect, we can use contentChild to get a reference with descendants:true property option-->
+  <div>
+    <h2 #h2>Computed Signal Example</h2>
+  </div>
+  <div>
+    <!--!we no need to provide a descendants:true property option if we want to
+    access the WidgetComponent -->
+    <app-widget></app-widget>
+  </div>
+</app-computed-signal15>
