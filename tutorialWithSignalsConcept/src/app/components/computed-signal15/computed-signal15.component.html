@@ -1,6 +1,5 @@
 <p>computed-signal15 works!</p>
 -------------------------------
-<p>ng-content BELOW</p>
-<div>
-  <ng-content></ng-content>
-</div>
+<div #requiredEl>I am required DIV Element</div>
+<div *ngIf="showEl()" #optionalEl>I am optional DIV Element</div>
+<button (click)="toggleEl()">Toggle optional element</button>
